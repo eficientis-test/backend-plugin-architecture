@@ -1,0 +1,23 @@
+{
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"esbenp.prettier-vscode",
+		"usernamehw.errorlens",
+		"yoavbls.pretty-ts-errors",
+		"njzy.stats-bar",
+		"codeium.codeium",
+		"naumovs.color-highlight",
+		"sitoi.ai-commit",
+		"spacebox.monospace-idx-theme",
+		"angular.ng-template",
+		"usernamehw.todo-md",
+		"sndst00m.vscode-native-svg-preview",
+		"humao.rest-client",
+		"mohamed-nouri.websocket-client",
+		"ghaschel.vscode-angular-html",
+		"richie5um2.vscode-sort-json",
+		"ritwickdey.liveserver",
+		"vivaxy.vscode-conventional-commits",
+		"orta.vscode-jest"
+	]
+}

@@ -1,0 +1,50 @@
+{
+	"name": "functions",
+	"scripts": {
+		"build": "tsc",
+		"watch": "tsc -w",
+		"start": "kill-port 4201 && npm run build && firebase serve --port=4201",
+		"emulator": "npm run build && npm run kill:ports && firebase emulators:start --import=./firedata --export-on-exit=./firedata",
+		"kill:ports": "kill-port 8080 && kill-port 9090 && kill-port 40000",
+		"deploy": "firebase deploy --only functions",
+		"prettier": "prettier --write 'src/**/*.ts'",
+		"lint": "eslint \"src/**/*\"",
+		"logs": "firebase functions:log",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"test:coverage": "jest --coverage"
+	},
+	"engines": {
+		"node": "20"
+	},
+	"main": "lib/index.js",
+	"dependencies": {
+		"apollo-server-core": "^3.13.0",
+		"apollo-server-express": "^3.13.0",
+		"class-transformer": "^0.5.1",
+		"class-validator": "^0.14.1",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"firebase-admin": "^13.0.2",
+		"firebase-functions": "^6.3.0",
+		"fireorm": "^0.23.3",
+		"graphql": "^15.5.0",
+		"type-graphql": "^1.1.1",
+		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/jest": "^29.5.14",
+		"@typescript-eslint/eslint-plugin": "^6.17.0",
+		"@typescript-eslint/parser": "^6.17.0",
+		"eslint": "^7.6.0",
+		"eslint-plugin-import": "^2.22.0",
+		"firebase-functions-test": "^0.2.0",
+		"firebase-tools": "^13.0.2",
+		"jest": "^29.7.0",
+		"prettier": "^2.8.4",
+		"ts-jest": "^29.2.5",
+		"typescript": "^5.3.3",
+		"typescript-coverage-report": "^0.8.0"
+	},
+	"private": true
+}

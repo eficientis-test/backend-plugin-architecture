@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "outDir": "./lib",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "target": "es2017",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/config/**/*.json"],
+  "exclude": ["node_modules", "lib", "dist"]
+}

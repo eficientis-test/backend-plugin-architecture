@@ -1,0 +1,35 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "backend (prod)",
+			"type": "node",
+			"request": "launch",
+			"sourceMaps": true,
+			"console": "integratedTerminal",
+			"cwd": "${workspaceFolder}/backend/functions",
+			"env": {
+				"NVM_DIR": "${env:NVM_DIR}"
+			},
+			"runtimeExecutable": "${env:NVM_DIR}/versions/node/v20.6.1/bin/npm",
+			"runtimeVersion": "20.6.1",
+			"runtimeArgs": ["run-script", "start"],
+			"outFiles": ["${workspaceFolder}/backend/functions/lib/**/*.js"]
+		},
+		{
+			"name": "backend (dev)",
+			"type": "node",
+			"request": "launch",
+			"sourceMaps": true,
+			"console": "integratedTerminal",
+			"cwd": "${workspaceFolder}/backend/functions",
+			"env": {
+				"NVM_DIR": "${env:NVM_DIR}"
+			},
+			"runtimeExecutable": "${env:NVM_DIR}/versions/node/v20.6.1/bin/npm",
+			"runtimeVersion": "20.6.1",
+			"runtimeArgs": ["run-script", "emulator"],
+			"outFiles": ["${workspaceFolder}/backend/functions/lib/**/*.js"]
+		}
+	]
+}
