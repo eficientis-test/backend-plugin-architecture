@@ -1,4 +1,4 @@
-name: Publish Users Package
+name: Publish Users Module Package
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
           echo "@eficientis-test:registry=https://npm.pkg.github.com" > ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
 
-      - name: Install dependencies (Users)
+      - name: Install dependencies
         working-directory: backend/functions/src/plugins/users
         run: npm install
 
@@ -31,6 +31,12 @@ jobs:
         working-directory: backend/functions/src/plugins/users
         run: npm run build
 
+      - name: Verify build output
+        working-directory: backend/functions/src/plugins/users
+        run: ls -l lib/
+
       - name: Publish Users Module
         working-directory: backend/functions/src/plugins/users
         run: npm publish --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_PACKAGES_TOKEN }}

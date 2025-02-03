@@ -2,7 +2,7 @@
 	"name": "@eficientis-test/core",
 	"version": "1.0.0",
 	"description": "Core package for Eficientis",
-	"main": "lib/core/index.js",
+	"main": "lib/index.js",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/eficientis-test/backend-plugin-architecture.git"
