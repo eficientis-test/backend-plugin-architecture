@@ -1,14 +1,14 @@
 {
-  "name": "@eficientis/users",
+  "name": "@eficientis-test/users",
   "version": "1.0.1",
   "description": "Users package for Eficientis",
-  "main": "index.js",
+  "main": "lib/plugins/users/index.js",
   "repository": {
     "type": "git",
 		"url": "https://github.com/eficientis-test/backend-plugin-architecture.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com/"
   },
   "dependencies": {
     "type-graphql": "^1.1.1",

@@ -20,7 +20,7 @@
 		"node": "20"
 	},
 	"publishConfig": {
-		"registry": "https://npm.pkg.github.com"
+		"registry": "https://npm.pkg.github.com/"
 	},
 	"main": "lib/index.js",
 	"dependencies": {
