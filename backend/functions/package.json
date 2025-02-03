@@ -12,10 +12,15 @@
 		"logs": "firebase functions:log",
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"test:coverage": "jest --coverage"
+		"test:coverage": "jest --coverage",
+		"publish:core": "cd src/core && npm publish --access=restricted",
+		"publish:users": "cd plugins/users && npm publish --access=restricted"
 	},
 	"engines": {
 		"node": "20"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
 	},
 	"main": "lib/index.js",
 	"dependencies": {

@@ -1,0 +1,17 @@
+{
+  "name": "@eficientis/users",
+  "version": "1.0.0",
+  "description": "Users package for Eficientis",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+		"url": "https://github.com/eficientis-test/eficientis-monorepo.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "type-graphql": "^1.1.1",
+    "fireorm": "^0.23.3"
+  }
+}

@@ -1,0 +1,30 @@
+name: Publish Core & Users to GitHub Packages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup .npmrc
+        run: |
+          echo "@eficientis:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
+
+      - run: npm install
+      - run: npm run build
+      
+      - name: Publish Core
+        run: cd backend/core && npm publish --access=restricted
+
+      - name: Publish Users Module
+        run: cd backend/plugins/users && npm publish --access=restricted
