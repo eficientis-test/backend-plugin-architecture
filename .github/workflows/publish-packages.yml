@@ -19,7 +19,8 @@ jobs:
       - name: Setup .npmrc
         run: |
           echo "@eficientis:registry=https://npm.pkg.github.com" > ~/.npmrc
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.EFICIENTIS_TOKEN }}" >> ~/.npmrc
+          echo "always-auth=true" >> ~/.npmrc
 
       - name: Install dependencies
         working-directory: backend/functions
@@ -31,8 +32,8 @@ jobs:
       
       - name: Publish Core
         working-directory: backend/functions/src/core
-        run: npm publish --access=restricted
+        run: npm publish --access=public
 
       - name: Publish Users Module
         working-directory: backend/functions/src/plugins/users
-        run: npm publish --access=restricted
+        run: npm publish --access=public

@@ -1,6 +1,6 @@
 {
   "name": "@eficientis/users",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Users package for Eficientis",
   "main": "index.js",
   "repository": {

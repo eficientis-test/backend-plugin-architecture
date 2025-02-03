@@ -13,8 +13,8 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
-		"publish:core": "cd src/core && npm publish --access=restricted",
-		"publish:users": "cd plugins/users && npm publish --access=restricted"
+		"publish:core": "cd src/core && npm publish --access=public",
+		"publish:users": "cd plugins/users && npm publish --access=public"
 	},
 	"engines": {
 		"node": "20"
@@ -50,6 +50,5 @@
 		"ts-jest": "^29.2.5",
 		"typescript": "^5.3.3",
 		"typescript-coverage-report": "^0.8.0"
-	},
-	"private": true
+	}
 }
