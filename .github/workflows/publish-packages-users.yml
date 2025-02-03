@@ -1,12 +1,14 @@
-name: Publish Packages with GitHub Packages
+name: Publish Users Package
 
 on:
   push:
     branches:
       - main
+    paths:
+      - "backend/functions/src/plugins/users/**"
 
 jobs:
-  publish:
+  publish-users:
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,17 +23,13 @@ jobs:
           echo "@eficientis-test:registry=https://npm.pkg.github.com" > ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
 
-      - name: Install dependencies
-        working-directory: backend/functions
+      - name: Install dependencies (Users)
+        working-directory: backend/functions/src/plugins/users
         run: npm install
 
-      - name: Build packages
-        working-directory: backend/functions
+      - name: Build Users Package
+        working-directory: backend/functions/src/plugins/users
         run: npm run build
-      
-      - name: Publish Core
-        working-directory: backend/functions/src/core
-        run: npm publish --access=public
 
       - name: Publish Users Module
         working-directory: backend/functions/src/plugins/users

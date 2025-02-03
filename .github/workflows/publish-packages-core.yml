@@ -1,0 +1,36 @@
+name: Publish Core Package
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "backend/functions/src/core/**"
+
+jobs:
+  publish-core:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .npmrc
+        run: |
+          echo "@eficientis-test:registry=https://npm.pkg.github.com" > ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
+
+      - name: Install dependencies (Core)
+        working-directory: backend/functions/src/core
+        run: npm install
+
+      - name: Build Core Package
+        working-directory: backend/functions/src/core
+        run: npm run build
+
+      - name: Publish Core
+        working-directory: backend/functions/src/core
+        run: npm publish --access=public

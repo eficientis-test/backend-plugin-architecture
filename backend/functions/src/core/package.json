@@ -1,6 +1,6 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"description": "Core package for Eficientis",
 	"main": "lib/core/index.js",
 	"repository": {
