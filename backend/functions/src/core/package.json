@@ -1,25 +1,54 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"description": "Core package for Eficientis",
-	"main": "lib/index.js",
-	"types": "lib/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./lib/index.js",
-			"require": "./lib/index.js"
-		},
-		"./Kernel": "./lib/Kernel.js",
-		"./GraphQLServer": "./lib/GraphQLServer.js",
-		"./EventBus": "./lib/EventBus.js",
-		"./PluginManager": "./lib/PluginManager.js",
-		"./PluginRegistry": "./lib/PluginRegistry.js",
-		"./PluginContract": "./lib/PluginContract.js",
-		"./FirebaseApp": "./lib/FirebaseApp.js"
-	},
-	"files": [
-		"lib/**/*"
-	],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./Kernel": {
+      "import": "./lib/Kernel.js",
+      "require": "./lib/Kernel.js",
+      "types": "./lib/Kernel.d.ts"
+    },
+    "./GraphQLServer": {
+      "import": "./lib/GraphQLServer.js",
+      "require": "./lib/GraphQLServer.js",
+      "types": "./lib/GraphQLServer.d.ts"
+    },
+    "./EventBus": {
+      "import": "./lib/EventBus.js",
+      "require": "./lib/EventBus.js",
+      "types": "./lib/EventBus.d.ts"
+    },
+    "./PluginManager": {
+      "import": "./lib/PluginManager.js",
+      "require": "./lib/PluginManager.js",
+      "types": "./lib/PluginManager.d.ts"
+    },
+    "./PluginRegistry": {
+      "import": "./lib/PluginRegistry.js",
+      "require": "./lib/PluginRegistry.js",
+      "types": "./lib/PluginRegistry.d.ts"
+    },
+    "./PluginContract": {
+      "import": "./lib/PluginContract.js",
+      "require": "./lib/PluginContract.js",
+      "types": "./lib/PluginContract.d.ts"
+    },
+    "./FirebaseApp": {
+      "import": "./lib/FirebaseApp.js",
+      "require": "./lib/FirebaseApp.js",
+      "types": "./lib/FirebaseApp.d.ts"
+    }
+  },
+  "files": [
+    "lib/**/*"
+  ],
 	"scripts": {
 		"build": "tsc"
 	},
