@@ -7,14 +7,14 @@
 		"emulator": "npm run build && npm run kill:ports && firebase emulators:start --import=./firedata --export-on-exit=./firedata",
 		"kill:ports": "kill-port 8080 && kill-port 9090 && kill-port 40000",
 		"deploy": "firebase deploy --only functions",
-		"prettier": "prettier --write 'src/**/*.ts'",
+		"prettier": "prettier --write \"src/**/*.ts\"",
 		"lint": "eslint \"src/**/*\"",
 		"logs": "firebase functions:log",
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
 		"publish:core": "cd src/core && npm publish --access=public",
-		"publish:users": "cd plugins/users && npm publish --access=public"
+		"publish:users": "cd src/plugins/users && npm publish --access=public"
 	},
 	"engines": {
 		"node": "20"
