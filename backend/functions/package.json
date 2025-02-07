@@ -13,8 +13,8 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage",
-		"publish:core": "cd src/core && npm publish --access=public",
-		"publish:users": "cd src/plugins/users && npm publish --access=public"
+		"publish:core": "cd src/core && npm run build && npm publish --access=public",
+		"publish:users": "cd src/plugins/users && npm run build && npm publish --access=public"
 	},
 	"engines": {
 		"node": "20"

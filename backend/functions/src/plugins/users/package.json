@@ -2,7 +2,14 @@
   "name": "@eficientis-test/users",
   "version": "1.0.0",
   "description": "Users package for Eficientis",
-  "main": "lib/index.js",
+	"main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
   "repository": {
     "type": "git",
 		"url": "https://github.com/eficientis-test/backend-plugin-architecture.git"

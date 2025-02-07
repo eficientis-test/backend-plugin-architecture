@@ -22,17 +22,13 @@ jobs:
           echo "//npm.pkg.github.com/:_authToken=${{ secrets.GH_PACKAGES_TOKEN }}" >> ~/.npmrc
 
       - name: Install dependencies
-        working-directory: backend/functions
+        working-directory: backend/functions/src/core
         run: npm install
 
       - name: Build packages
-        working-directory: backend/functions
+        working-directory: backend/functions/src/core
         run: npm run build
       
       - name: Publish Core
         working-directory: backend/functions/src/core
-        run: npm publish --access=public
-
-      - name: Publish Users Module
-        working-directory: backend/functions/src/plugins/users
         run: npm publish --access=public
