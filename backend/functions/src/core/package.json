@@ -1,6 +1,6 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "Core package for Eficientis",
 	"main": "lib/Kernel.js",
   "types": "lib/Kernel.d.ts",
