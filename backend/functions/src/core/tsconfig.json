@@ -1,23 +1,22 @@
 {
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
-    "types": ["node"],
     "module": "commonjs",
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "outDir": "./lib",
-    "rootDir": ".",
-    "sourceMap": true,
-    "esModuleInterop": true,
-    "strict": true,
     "target": "es2017",
     "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./lib",
+    "rootDir": "./",
+    "allowSyntheticDefaultImports": true
   },
-  "include": ["**/*.ts"],
+  "include": ["./**/*.ts"],
   "exclude": ["node_modules", "lib", "dist"]
 }
