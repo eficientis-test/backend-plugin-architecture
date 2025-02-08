@@ -1,48 +1,41 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Core package for Eficientis",
-  "exports": {
-    "./Kernel": {
-      "import": "./lib/Kernel.js",
-      "require": "./lib/Kernel.js",
-      "types": "./lib/Kernel.d.ts"
-    },
-    "./GraphQLServer": {
-      "import": "./lib/GraphQLServer.js",
-      "require": "./lib/GraphQLServer.js",
-      "types": "./lib/GraphQLServer.d.ts"
-    },
-    "./EventBus": {
-      "import": "./lib/EventBus.js",
-      "require": "./lib/EventBus.js",
-      "types": "./lib/EventBus.d.ts"
-    },
-    "./PluginManager": {
-      "import": "./lib/PluginManager.js",
-      "require": "./lib/PluginManager.js",
-      "types": "./lib/PluginManager.d.ts"
-    },
-    "./PluginRegistry": {
-      "import": "./lib/PluginRegistry.js",
-      "require": "./lib/PluginRegistry.js",
-      "types": "./lib/PluginRegistry.d.ts"
-    },
-    "./PluginContract": {
-      "import": "./lib/PluginContract.js",
-      "require": "./lib/PluginContract.js",
-      "types": "./lib/PluginContract.d.ts"
-    },
-    "./FirebaseApp": {
-      "import": "./lib/FirebaseApp.js",
-      "require": "./lib/FirebaseApp.js",
-      "types": "./lib/FirebaseApp.d.ts"
-    }
-  },
-  "files": [
-    "lib/*.js",
-    "lib/*.d.ts"
-  ],
+	"exports": {
+		"./Kernel": {
+			"require": "./lib/Kernel.js",
+			"types": "./lib/Kernel.d.ts"
+		},
+		"./GraphQLServer": {
+			"require": "./lib/GraphQLServer.js",
+			"types": "./lib/GraphQLServer.d.ts"
+		},
+		"./EventBus": {
+			"require": "./lib/EventBus.js",
+			"types": "./lib/EventBus.d.ts"
+		},
+		"./PluginManager": {
+			"require": "./lib/PluginManager.js",
+			"types": "./lib/PluginManager.d.ts"
+		},
+		"./PluginRegistry": {
+			"require": "./lib/PluginRegistry.js",
+			"types": "./lib/PluginRegistry.d.ts"
+		},
+		"./PluginContract": {
+			"require": "./lib/PluginContract.js",
+			"types": "./lib/PluginContract.d.ts"
+		},
+		"./FirebaseApp": {
+			"require": "./lib/FirebaseApp.js",
+			"types": "./lib/FirebaseApp.d.ts"
+		}
+	},
+	"files": [
+		"lib/*.js",
+		"lib/*.d.ts"
+	],
 	"scripts": {
 		"build": "tsc"
 	},
@@ -65,5 +58,8 @@
 		"class-transformer": "^0.5.1",
 		"class-validator": "^0.14.1",
 		"zod": "^3.23.8"
+	},
+	"devDependencies": {
+		"@types/node": "^22.13.1"
 	}
 }
