@@ -1,9 +1,9 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.8",
+	"version": "1.0.9",
 	"description": "Core package for Eficientis",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "types": "lib",
   "exports": {
     ".": "./lib/index.js",
     "./index": "./lib/index.js",
