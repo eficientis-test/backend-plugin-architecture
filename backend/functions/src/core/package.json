@@ -2,19 +2,7 @@
 	"name": "@eficientis-test/core",
 	"version": "1.0.0",
 	"description": "Core package for Eficientis",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "exports": {
-    ".": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    },
-    "./index": {
-      "import": "./lib/index.js",
-      "require": "./lib/index.js",
-      "types": "./lib/index.d.ts"
-    },
     "./Kernel": {
       "import": "./lib/Kernel.js",
       "require": "./lib/Kernel.js",
