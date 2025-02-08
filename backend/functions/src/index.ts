@@ -1,6 +1,6 @@
 import * as functions from 'firebase-functions/v1'; // Asegura usar la versión correcta
-import { Kernel } from './core/Kernel';
 import { GraphQLServer } from './core/GraphQLServer';
+import { Kernel } from './core/Kernel';
 
 const kernel = new Kernel();
 
