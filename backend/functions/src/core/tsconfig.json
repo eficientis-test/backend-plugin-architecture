@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "NodeNext",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "outDir": "./lib",
@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "strict": true,
     "target": "es2017",
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
