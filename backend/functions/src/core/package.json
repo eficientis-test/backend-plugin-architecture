@@ -1,15 +1,43 @@
 {
 	"name": "@eficientis-test/core",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"description": "Core package for Eficientis",
 	"exports": {
-		"./Kernel": "./lib/Kernel.js",
-		"./GraphQLServer": "./lib/GraphQLServer.js",
-		"./EventBus": "./lib/EventBus.js",
-		"./PluginManager": "./lib/PluginManager.js",
-		"./PluginRegistry": "./lib/PluginRegistry.js",
-		"./PluginContract": "./lib/PluginContract.js",
-		"./FirebaseApp": "./lib/FirebaseApp.js"
+		"./Kernel": {
+			"types": "./lib/Kernel.d.ts",
+			"import": "./lib/Kernel.js",
+			"require": "./lib/Kernel.js"
+		},
+		"./GraphQLServer": {
+			"types": "./lib/GraphQLServer.d.ts",
+			"import": "./lib/GraphQLServer.js",
+			"require": "./lib/GraphQLServer.js"
+		},
+		"./EventBus": {
+			"types": "./lib/EventBus.d.ts",
+			"import": "./lib/EventBus.js",
+			"require": "./lib/EventBus.js"
+		},
+		"./PluginManager": {
+			"types": "./lib/PluginManager.d.ts",
+			"import": "./lib/PluginManager.js",
+			"require": "./lib/PluginManager.js"
+		},
+		"./PluginRegistry": {
+			"types": "./lib/PluginRegistry.d.ts",
+			"import": "./lib/PluginRegistry.js",
+			"require": "./lib/PluginRegistry.js"
+		},
+		"./PluginContract": {
+			"types": "./lib/PluginContract.d.ts",
+			"import": "./lib/PluginContract.js",
+			"require": "./lib/PluginContract.js"
+		},
+		"./FirebaseApp": {
+			"types": "./lib/FirebaseApp.d.ts",
+			"import": "./lib/FirebaseApp.js",
+			"require": "./lib/FirebaseApp.js"
+		}
 	},
 	"files": [
 		"lib/**/*"
