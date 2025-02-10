@@ -13,7 +13,10 @@
     "resolveJsonModule": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "./lib"
   },
   "include": ["./**/*.ts"],
   "exclude": ["node_modules", "lib", "dist"]
